@@ -23,7 +23,7 @@ description:
 * trace.h	宏定义
 * util.h/util.c	实用函数，主要为字符串到整数的转换
 
-![](/public/upload/Memcached/mem_source.jpg)
+![](/public/upload/memcached/mem_source.jpg)
 
 -->
 
