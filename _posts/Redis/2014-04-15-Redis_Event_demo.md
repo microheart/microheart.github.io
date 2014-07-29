@@ -8,7 +8,9 @@ description:
 ---
 
 
-为什么需要事件库(来源于http://blog.ddup.us/?p=114)【FAQ】
+## 为什么需要事件库  
+
+摘录于[此站](http://blog.ddup.us/?p=114)
 
 * Q：你期望一个网络服务器如何工作？
 * A：在它监听的端口等待连接的到来并且为之服务。
@@ -56,10 +58,12 @@ Redis的内存管理是应用zmalloc()、zfree()等系列函数，可以简单�
 Server监听23456端口，不断处理来自客户端的请求；同时启动一个定时器，类似于Redis中的ServerCron。
 
 ### 启动Server, 监听默认端口
-* $ ./server
+
+	$ ./server
 
 ### 启动客户端
-* $ telnet 10.64.40.36 23456 
+	
+	$ telnet 10.64.40.36 23456 
 
 ### 附上main.c源码
 
