@@ -2,8 +2,8 @@
 layout: post
 title: Redis 工作流程解析 
 category: Redis
-tags: 
-keywords: 
+tags: Redis
+keywords: Redis, 流程
 description: 
 ---
 

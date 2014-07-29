@@ -2,8 +2,8 @@
 layout: post
 title: 协议格式
 category: Redis
-tags: 
-keywords: 
+tags: [Redis,协议]
+keywords: 协议
 description: 
 ---
 

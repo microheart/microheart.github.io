@@ -2,8 +2,8 @@
 layout: post
 title: 调试Redis 
 category: Redis
-tags: 
-keywords: 
+tags: 安装
+keywords: Redis,安装
 description: 
 ---
 

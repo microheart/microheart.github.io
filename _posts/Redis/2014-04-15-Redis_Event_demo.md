@@ -2,7 +2,7 @@
 layout: post
 title: Redis网络事件框架及Demo 
 category: Redis
-tags: 事件框架
+tags: 事件处理
 keywords: 事件框架
 description: 
 ---

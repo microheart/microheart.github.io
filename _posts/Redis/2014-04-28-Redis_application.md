@@ -2,8 +2,8 @@
 layout: post
 title: Redis应用场景 
 category: Redis
-tags: 
-keywords: 
+tags: Redis
+keywords: Redis,应用场景
 description: 
 ---
 
