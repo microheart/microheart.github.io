@@ -198,4 +198,4 @@ Scrapy采用XPath选择器检索数据，一中基于XPath表达式的方式，�
 	scrapy crawl dmoz_spider -o items.json -t json
 
 
-http://doc.scrapy.org/en/0.18/intro/tutorial.html
+> http://doc.scrapy.org/en/0.18/intro/tutorial.html

@@ -12,7 +12,7 @@ description:
 
 Scrapy是一个基于[Twisted](http://twistedmatrix.com/trac/)异步网络库的爬虫框架，用Python编写，结构清晰，使用灵活。它的整体架构如下图所示，绿色箭头表示数据流向。
 
-![](/public/upload/python/scrapy_architecture.jpg)
+![](/public/upload/python/scrapy_architecture.JPG)
 
 ## 组件
 
