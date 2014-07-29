@@ -44,4 +44,4 @@ mmseg4j 用 Chih-Hao Tsai 的 MMSeg 算法(http://technology.chtsai.org/mmseg/ )
 重启tomcat，访问[Solr Analysis](http://localhost:8080/solr/#/collection1/analysis), `http://localhost:8080/solr/#/collection1/analysis` , 即在solr主界面下方，collection1->Anaylysis
 在Field Value(Index)中输入 (如何让你遇见我 在我最美丽的时刻),FieldType选择(textComplex),结果如下
 
-![solr analysis](/public/upload/java/solr_analysis.png)
+![solr analysis](/public/upload/java/solr_analysis.PNG)

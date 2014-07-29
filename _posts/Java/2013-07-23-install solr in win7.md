@@ -66,4 +66,4 @@ description:
 
 打开`http://localhost:8080/solr/`
 
-![solr home](/public/upload/java/solr_home.png)
+![solr home](/public/upload/java/solr_home.PNG)
