@@ -9,7 +9,8 @@ description:
 
 ## Memcached概述
 
-Memcached 是一个高性能的分布式内存对象缓存系统，用于动态 Web 应用以减轻数据库负载。它通过在内存中缓存数据和对象来减少读取数据库的次数，从而提高动态、数据库驱动网站的速度。
+`Memcached`是一个高性能的分布式内存对象缓存系统，用于动态 Web 应用以减轻数据库负载。它通过在内存中缓存数据和对象来减少读取数据库的次数，从而提高动态、数据库驱动网站的速度。
+此系列文章通过阅读源码对`Memcached1.4.15`的核心部分进行了解析，希望和对Memcached感兴趣的朋友们一起学习，共同进步。在阅读文章中，如有建议敬请反馈，谢谢。
 
 ## Memcached特征
 
@@ -56,10 +57,10 @@ Memcached的分布式算法将不同的键保存到不同的服务器上。在�
 
 关于Memcached的一系列文章参考的主要资料如下，以后的文档将不一一列出，非常感谢他们为Memcached研究所做的贡献，使得我们能更快的上手和理解。由于很多资料无法找到原始出处，本文将只列出其名字，可以通过google找到相关资料。
 
-[1]孙玄：Inside Memcached@孙玄musicml.pdf  
-[2]Xguru：[Memcached源码剖析笔记.pdf](http://www.cppblog.com/xguru/archive/2013/04/22/106265.html)  
-[3]刘中兵：Memcached内存分析、调优、集群.pptx  
-[4]长野雅广、前坂徹：memcached全面剖析.pdf  
-[5]Memcached深度分析.pdf  
-[6]heiyeluren：Memcached原理和使用详解.pdf  
-[7]谭洪林：Memcached源代码分析.pdf  
+* 孙玄：Inside Memcached@孙玄musicml.pdf  
+* Xguru：[Memcached源码剖析笔记.pdf](http://www.cppblog.com/xguru/archive/2013/04/22/106265.html)  
+* 刘中兵：Memcached内存分析、调优、集群.pptx  
+* 长野雅广、前坂徹：memcached全面剖析.pdf  
+* Memcached深度分析.pdf  
+* heiyeluren：Memcached原理和使用详解.pdf  
+* 谭洪林：Memcached源代码分析.pdf  
