@@ -4,16 +4,16 @@ markdown: redcarpet
 
 # 作者信息
 author: 
-  name: 闫肃
-  email: yansu0711@gmail.com
-  link: http://yansu.org
-  weibo: http://weibo.com/yansu0711
-  github: http://github.com/suyan
+  name: 徐顺
+  email: xushun007@gmail.com
+  link: http://www.cocoloud.net
+  weibo: http://weibo.com/mircoheart
+  github: https://github.com/microheart
 
 # 站点信息
-title: 闫肃的博客 
-description: 闫肃的博客
-url: http://yansu.org
+title: 徐顺的博客 
+description: 徐顺的博客
+url: http://www.cocoloud.net
 rss_url: /pages/atom.xml
 
 # gavatar头像及Favicon
@@ -21,21 +21,22 @@ gavatar: /public/upload/gavatar/gavatar.png
 favicon: /public/upload/gavatar/favicon.ico
 
 # google analytics 设置
-ga:
-  id: UA-43667383-1
-  url: yansu.org
+#ga:
+#  id: UA-43667383-1
+#  url: yansu.org
 
 # disqus 设置
 disqus:
-  shortname: suyan-zh
+  shortname: xandy-zh
 
 # 主题设置，自动激活某个标签
 active: 技术
 
 # 首页除了最新文章外显示分类
 cates: 
-  - Python
-  - OpenStack
+  - Memcached
+  - Redis
+  - Hadoop
 
 # 中文本地化
 locals:
