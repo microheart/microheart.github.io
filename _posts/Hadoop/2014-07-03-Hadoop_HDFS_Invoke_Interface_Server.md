@@ -2,7 +2,7 @@
 layout: post
 title: Hadoop 远程过程调用接口-服务器间接口
 category: Hadoop
-tags: 
+tags: [Hadoop,RPC]
 keywords: 
 description: 
 ---

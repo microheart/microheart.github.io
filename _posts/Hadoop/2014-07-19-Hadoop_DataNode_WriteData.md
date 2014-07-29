@@ -2,8 +2,8 @@
 layout: post
 title: Hadoop 数据节点之写数据
 category: Hadoop
-tags: 
-keywords: 
+tags: [Hadoop,协议]
+keywords: Hadoop流式接口
 description: 
 ---
 

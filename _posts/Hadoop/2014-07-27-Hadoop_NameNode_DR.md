@@ -2,8 +2,8 @@
 layout: post
 title: Hadoop 名字节点读写数据 
 category: Hadoop
-tags: 
-keywords: 
+tags: [Hadoop,协议]
+keywords: 读数据, 写数据
 description: 
 ---
 

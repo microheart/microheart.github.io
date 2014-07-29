@@ -2,7 +2,7 @@
 layout: post
 title: Hadoop 安装
 category: Hadoop
-tags: 
+tags: [安装,源码]
 keywords: 
 description: 
 ---

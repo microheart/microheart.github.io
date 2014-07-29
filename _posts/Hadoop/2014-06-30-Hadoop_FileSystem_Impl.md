@@ -2,7 +2,7 @@
 layout: post
 title: Hadoop FileSystem & ChecksumFileSystem 
 category: Hadoop
-tags: 
+tags: [Hadoop,FileSystem]
 keywords: 
 description: 
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: Hadoop IPC原理 
 category: Hadoop
-tags: 
+tags: [Hadoop,RPC]
 keywords: 
 description: 
 ---

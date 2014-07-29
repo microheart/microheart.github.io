@@ -2,8 +2,8 @@
 layout: post
 title: Hadoop 数据节点之读数据 
 category: Hadoop
-tags: 
-keywords: 
+tags: Hadoop
+keywords: 读数据，数据节点
 description: 
 ---
 

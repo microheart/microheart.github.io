@@ -2,7 +2,7 @@
 layout: post
 title: ByteBuffer
 category: Java
-tags: 
+tags: Buffer
 keywords: 
 description: 
 ---

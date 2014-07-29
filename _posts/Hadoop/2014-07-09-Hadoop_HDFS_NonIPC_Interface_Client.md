@@ -2,7 +2,7 @@
 layout: post
 title: Hadoop 流式接口 
 category: Hadoop
-tags: 
+tags: [Hadoop,协议]
 keywords: 
 description: 
 ---

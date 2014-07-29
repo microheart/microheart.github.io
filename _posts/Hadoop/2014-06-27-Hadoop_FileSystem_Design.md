@@ -2,7 +2,7 @@
 layout: post
 title: Hadoop HDFS设计
 category: Hadoop
-tags: 
+tags: HDFS
 keywords: 
 description: 
 ---
