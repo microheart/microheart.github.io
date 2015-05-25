@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 持续写作的重要性
-category: 生活
+category: Other
 tags: 生活
 keywords: 写作
 description: 
