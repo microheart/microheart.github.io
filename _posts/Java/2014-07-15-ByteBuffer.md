@@ -7,6 +7,8 @@ keywords:
 description: 
 ---
 
+2015-03 update 
+增加实例
 
 ## ByteBuffer 概览
 ByteBuffer抽象类是Java NIO里用得最多的Buffer，此类定义了除 boolean 之外，读写所有其他基本类型值的方法。它包含两个实现方式：
@@ -115,3 +117,46 @@ DirectByteBuffer的内容可以驻留在常规的垃圾回收堆之外，因此�
 
 
 ByteBuffer的底层结构清晰，不复杂，源码仍是弄清原理的最佳文档。
+
+## 基于ByteBuff, Channel的文件拷贝
+
+	public static void nioCopyFile(String src, String dest) throws IOException {
+			FileInputStream fis = null;
+			FileOutputStream fos = null;
+			try {
+				fis = new FileInputStream(src);
+				fos = new FileOutputStream(dest);
+				
+				FileChannel readChannel = fis.getChannel();
+				FileChannel writeChannel = fos.getChannel();
+				
+				ByteBuffer buff = ByteBuffer.allocate(4096);
+				//ByteBuffer buff = ByteBuffer.allocateDirect(4096);
+				
+				// ByteBuffer.clear() and ByteBuffer.flip() will change limit and position field.
+				while(true) {
+					buff.clear();
+					if(readChannel.read(buff) == -1) {
+						break;
+					}
+					buff.flip();
+					writeChannel.write(buff);
+				}
+			}
+			finally {
+				if(fis != null)
+					fis.close();
+				if(fos != null)
+					fos.close();
+			}
+	}
+
+分别对比了基于ByteBuffer和DirectBuffer在本地拷贝文件大小分别为1,121,208，135,815,584和1,360,875,520Byte的比较，
+ByteBuffer用时分别为181，825，13435ms。
+DirectBuffer用时分别为11，448，19378ms。
+
+疑惑的是在文件大于1G时，为啥DirectBuffer的性能比ByteBuffer低(经过多次测试)？
+将缓存大小设为40960Byte，仍得到相似的结果。
+
+ByteBuffer分配在堆空间，DirectBuffer分配在物理内存上，不受JVM堆的影响，创建和销毁DirectBuffer的代价高于ByteBuffer。
+在频繁创建和销毁Buffer的场合，不适宜用DirectBuffer。
