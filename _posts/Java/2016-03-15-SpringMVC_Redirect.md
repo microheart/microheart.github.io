@@ -11,7 +11,7 @@ description:
 Web应用中，当Server处理完POST请求后，一般都会重定向到另外的页面，这样可以防止用户刷新浏览器导致重新执行POST请求，带来业务冲突。
 
 ## SpringMVC 重定向方式
-SpringMVC 通过'redirect:<url>'的方式，将请求重定向到<url>中，现实情况下，我们通常需要将模型数据发给重定向的url中，一种较为简单的方法是在url后面链接查询参数（k=v），这种方式对一些模型对象的传递较为困难。
+SpringMVC 通过'redirect:&lt;url&gt;'的方式，将请求重定向到&lt;url&gt;中，现实情况下，我们通常需要将模型数据发给重定向的url中，一种较为简单的方法是在url后面链接查询参数（k=v），这种方式对一些模型对象的传递较为困难。
 SpringMVC支持两种传递数据的方式：
 
 1. 使用URL路径变量或查询参数传递数据
@@ -45,10 +45,10 @@ RedirectAttributes#addAttribute()将参数以查询参数形式传递到重定�
 
 通过路径变量和查询参数的形式跨重定向传递数据简单直接，但它只能发送简单的数据，如字符串。
 
-通过请求传递过来的数据，重定向后将会被丢弃，SpringMVC通过RedirectAttributes#addFlashAttribute()方法将模型数据先存入会话中，这些数据到下一次请求中仍然有效，然后再将这些flash模型数据清理。
+通过请求传递过来的数据，重定向后将会被丢弃，SpringMVC通过RedirectAttributes#addFlashAttribute()方法将模型数据先存入会话中，这些数据到下一次请求中仍然有效，然后再将这些flash模型数据清理。通过flash的方式可以方式复杂的数据对象。
 
 
-另外，如果我们将用户输入的字符串构建URL或用于SQL查询时，可能导致安全问题，SpringMVC可通过模板的方式对所有不安全的方式进行转义。
+另外，如果我们将用户输入的字符串构建URL或用于SQL查询时，可能导致安全问题，SpringMVC可通过模板的方式对所有不安全的数据进行转义。
 
 	@Controller
 	@RequestMapping("/r2")
