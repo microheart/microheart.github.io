@@ -81,4 +81,6 @@ description:
        onBridgeReady();
     }
 
+> https://pay.weixin.qq.com/wiki/doc/api/jsapi.php?chapter=9_1
+	
 总结：阅读文档细心，自己做设计也需要考虑全面，API友好，给出较为全面的错误码和错误描述。
