@@ -3,8 +3,8 @@ layout: post
 title: Memcached安装与调试
 category: Memcached
 tags: Memcached
-keywords: 
-description: 
+keywords:
+description:
 ---
 
 
@@ -40,7 +40,7 @@ yum 代理
 	#yum install telnet
 
 ## 测试
-	$ /usr/local/bin/memcached -d -vvv 
+	$ /usr/local/bin/memcached -d -vvv
 	$ telnet localhost 11211
 
 	[root@nj-grey-guo xandy]# telnet localhost 11211
@@ -51,19 +51,19 @@ yum 代理
 
 注：ping和ssh都可以连得上，若telnet连接memcached server连接不上，则需要将防火墙关闭。
 网上找了好久的资料，终于将这个问题解决了。
-	
+
 	# iptables -F
 
-### 存储命令	
+### 存储命令
 
-命令格式： <command name> <key> <flags> <exptime> <bytes> <data block>
-命令解释: 
-<command name>  set/add/replace
-<key>  查找关键字
-<flags> 客户机使用它存储关于键值对的额外信息
-<exptime> 该数据的存活时间,0为永远
-<bytes> 存储字节数
-<data block> 存储的数据块
+命令格式： &lt;command name&gt; &lt;key&gt; &lt;flags&gt; &lt;exptime&gt; &lt;bytes&gt; &lt;data block&gt;
+命令解释:
+&lt;command name&gt;  set/add/replace
+&lt;key&gt;  查找关键字
+&lt;flags&gt; 客户机使用它存储关于键值对的额外信息
+&lt;exptime&gt; 该数据的存活时间,0为永远
+&lt;bytes&gt; 存储字节数
+&lt;data block&gt; 存储的数据块
 
 	set server 0 0 9
 	localhost
@@ -95,11 +95,11 @@ repalce 只有数据存在时进行替换
 
 
 ### 读取命令
-get <key> 
-<key>可以表示一个或多个键值，由空格隔开的字串
+get &lt;key&gt;
+&lt;key&gt;可以表示一个或多个键值，由空格隔开的字串
 
 ### 删除命令
-delete <key> 
+delete &lt;key&gt;
 删除键值为key的数据。
 
 	delete port
@@ -222,8 +222,8 @@ stats
 	#2  0x000000000040cba6 in try_read_command (c=0x7fffe00261c0) at memcached.c:3768
 	#3  0x000000000040d8b9 in drive_machine (c=0x7fffe00261c0) at memcached.c:4113
 	#4  0x000000000040e427 in event_handler (fd=40, which=2, arg=0x7fffe00261c0) at memcached.c:4358
-	#5  0x00007ffff7de8c29 in event_process_active (base=0x63c870, flags=<value optimized out>) at event.c:395
-	#6  event_base_loop (base=0x63c870, flags=<value optimized out>) at event.c:547
+	#5  0x00007ffff7de8c29 in event_process_active (base=0x63c870, flags=&lt;value optimized out&gt;) at event.c:395
+	#6  event_base_loop (base=0x63c870, flags=&lt;value optimized out&gt;) at event.c:547
 	#7  0x00000000004175bf in worker_libevent (arg=0x62fa60) at thread.c:378
 	#8  0x0000003bce0079d1 in start_thread () from /lib64/libpthread.so.0
 	#9  0x0000003bcdce89dd in clone () from /lib64/libc.so.6
@@ -253,8 +253,8 @@ stats
 	#4  0x0000000000407dda in complete_nread (c=0x7fffe00261c0) at memcached.c:2276
 	#5  0x000000000040d9ec in drive_machine (c=0x7fffe00261c0) at memcached.c:4151
 	#6  0x000000000040e427 in event_handler (fd=40, which=2, arg=0x7fffe00261c0) at memcached.c:4358
-	#7  0x00007ffff7de8c29 in event_process_active (base=0x63c870, flags=<value optimized out>) at event.c:395
-	#8  event_base_loop (base=0x63c870, flags=<value optimized out>) at event.c:547
+	#7  0x00007ffff7de8c29 in event_process_active (base=0x63c870, flags=&lt;value optimized out&gt;) at event.c:395
+	#8  event_base_loop (base=0x63c870, flags=&lt;value optimized out&gt;) at event.c:547
 	#9  0x00000000004175bf in worker_libevent (arg=0x62fa60) at thread.c:378
 	#10 0x0000003bce0079d1 in start_thread () from /lib64/libpthread.so.0
 	#11 0x0000003bcdce89dd in clone () from /lib64/libc.so.6
@@ -268,8 +268,8 @@ stats
 	#5  0x0000000000407dda in complete_nread (c=0x7fffe00261c0) at memcached.c:2276
 	#6  0x000000000040d9ec in drive_machine (c=0x7fffe00261c0) at memcached.c:4151
 	#7  0x000000000040e427 in event_handler (fd=40, which=2, arg=0x7fffe00261c0) at memcached.c:4358
-	#8  0x00007ffff7de8c29 in event_process_active (base=0x63c870, flags=<value optimized out>) at event.c:395
-	#9  event_base_loop (base=0x63c870, flags=<value optimized out>) at event.c:547
+	#8  0x00007ffff7de8c29 in event_process_active (base=0x63c870, flags=&lt;value optimized out&gt;) at event.c:395
+	#9  event_base_loop (base=0x63c870, flags=&lt;value optimized out&gt;) at event.c:547
 	#10 0x00000000004175bf in worker_libevent (arg=0x62fa60) at thread.c:378
 	#11 0x0000003bce0079d1 in start_thread () from /lib64/libpthread.so.0
 	#12 0x0000003bcdce89dd in clone () from /lib64/libc.so.6
@@ -281,8 +281,8 @@ stats
 	#1  0x0000000000407dda in complete_nread (c=0x7fffe00261c0) at memcached.c:2276
 	#2  0x000000000040d9ec in drive_machine (c=0x7fffe00261c0) at memcached.c:4151
 	#3  0x000000000040e427 in event_handler (fd=40, which=2, arg=0x7fffe00261c0) at memcached.c:4358
-	#4  0x00007ffff7de8c29 in event_process_active (base=0x63c870, flags=<value optimized out>) at event.c:395
-	#5  event_base_loop (base=0x63c870, flags=<value optimized out>) at event.c:547
+	#4  0x00007ffff7de8c29 in event_process_active (base=0x63c870, flags=&lt;value optimized out&gt;) at event.c:395
+	#5  event_base_loop (base=0x63c870, flags=&lt;value optimized out&gt;) at event.c:547
 	#6  0x00000000004175bf in worker_libevent (arg=0x62fa60) at thread.c:378
 	#7  0x0000003bce0079d1 in start_thread () from /lib64/libpthread.so.0
 	#8  0x0000003bcdce89dd in clone () from /lib64/libc.so.6
@@ -291,8 +291,8 @@ stats
 	(gdb) bt
 	#0  drive_machine (c=0x7fffe00261c0) at memcached.c:4269
 	#1  0x000000000040e427 in event_handler (fd=40, which=2, arg=0x7fffe00261c0) at memcached.c:4358
-	#2  0x00007ffff7de8c29 in event_process_active (base=0x63c870, flags=<value optimized out>) at event.c:395
-	#3  event_base_loop (base=0x63c870, flags=<value optimized out>) at event.c:547
+	#2  0x00007ffff7de8c29 in event_process_active (base=0x63c870, flags=&lt;value optimized out&gt;) at event.c:395
+	#3  event_base_loop (base=0x63c870, flags=&lt;value optimized out&gt;) at event.c:547
 	#4  0x00000000004175bf in worker_libevent (arg=0x62fa60) at thread.c:378
 	#5  0x0000003bce0079d1 in start_thread () from /lib64/libpthread.so.0
 	#6  0x0000003bcdce89dd in clone () from /lib64/libc.so.6
@@ -308,7 +308,7 @@ stats
 
 
 	delete hi
-	3413            fprintf(stderr, "<%d %s\n", c->sfd, command);
+	3413            fprintf(stderr, "&lt;%d %s\n", c-&gt;sfd, command);
 	(gdb) p command
 	$33 = 0x7fffe00263d0 "delete hi"
 	(gdb) bt
@@ -316,8 +316,8 @@ stats
 	#1  0x000000000040cba6 in try_read_command (c=0x7fffe00261c0) at memcached.c:3768
 	#2  0x000000000040d8b9 in drive_machine (c=0x7fffe00261c0) at memcached.c:4113
 	#3  0x000000000040e427 in event_handler (fd=40, which=2, arg=0x7fffe00261c0) at memcached.c:4358
-	#4  0x00007ffff7de8c29 in event_process_active (base=0x63c870, flags=<value optimized out>) at event.c:395
-	#5  event_base_loop (base=0x63c870, flags=<value optimized out>) at event.c:547
+	#4  0x00007ffff7de8c29 in event_process_active (base=0x63c870, flags=&lt;value optimized out&gt;) at event.c:395
+	#5  event_base_loop (base=0x63c870, flags=&lt;value optimized out&gt;) at event.c:547
 	#6  0x00000000004175bf in worker_libevent (arg=0x62fa60) at thread.c:378
 	#7  0x0000003bce0079d1 in start_thread () from /lib64/libpthread.so.0
 	#8  0x0000003bcdce89dd in clone () from /lib64/libc.so.6
@@ -328,8 +328,8 @@ stats
 	#2  0x000000000040cba6 in try_read_command (c=0x7fffe00261c0) at memcached.c:3768
 	#3  0x000000000040d8b9 in drive_machine (c=0x7fffe00261c0) at memcached.c:4113
 	#4  0x000000000040e427 in event_handler (fd=40, which=2, arg=0x7fffe00261c0) at memcached.c:4358
-	#5  0x00007ffff7de8c29 in event_process_active (base=0x63c870, flags=<value optimized out>) at event.c:395
-	#6  event_base_loop (base=0x63c870, flags=<value optimized out>) at event.c:547
+	#5  0x00007ffff7de8c29 in event_process_active (base=0x63c870, flags=&lt;value optimized out&gt;) at event.c:395
+	#6  event_base_loop (base=0x63c870, flags=&lt;value optimized out&gt;) at event.c:547
 	#7  0x00000000004175bf in worker_libevent (arg=0x62fa60) at thread.c:378
 	#8  0x0000003bce0079d1 in start_thread () from /lib64/libpthread.so.0
 	#9  0x0000003bcdce89dd in clone () from /lib64/libc.so.6
@@ -343,8 +343,8 @@ stats
 	#4  0x000000000040cba6 in try_read_command (c=0x7fffe00261c0) at memcached.c:3768
 	#5  0x000000000040d8b9 in drive_machine (c=0x7fffe00261c0) at memcached.c:4113
 	#6  0x000000000040e427 in event_handler (fd=40, which=2, arg=0x7fffe00261c0) at memcached.c:4358
-	#7  0x00007ffff7de8c29 in event_process_active (base=0x63c870, flags=<value optimized out>) at event.c:395
-	#8  event_base_loop (base=0x63c870, flags=<value optimized out>) at event.c:547
+	#7  0x00007ffff7de8c29 in event_process_active (base=0x63c870, flags=&lt;value optimized out&gt;) at event.c:395
+	#8  event_base_loop (base=0x63c870, flags=&lt;value optimized out&gt;) at event.c:547
 	#9  0x00000000004175bf in worker_libevent (arg=0x62fa60) at thread.c:378
 	#10 0x0000003bce0079d1 in start_thread () from /lib64/libpthread.so.0
 	#11 0x0000003bcdce89dd in clone () from /lib64/libc.so.6
@@ -383,8 +383,8 @@ stats
 	#5  0x000000000040cba6 in try_read_command (c=0x7fffe00261c0) at memcached.c:3768
 	#6  0x000000000040d8b9 in drive_machine (c=0x7fffe00261c0) at memcached.c:4113
 	#7  0x000000000040e427 in event_handler (fd=40, which=2, arg=0x7fffe00261c0) at memcached.c:4358
-	#8  0x00007ffff7de8c29 in event_process_active (base=0x63c870, flags=<value optimized out>) at event.c:395
-	#9  event_base_loop (base=0x63c870, flags=<value optimized out>) at event.c:547
+	#8  0x00007ffff7de8c29 in event_process_active (base=0x63c870, flags=&lt;value optimized out&gt;) at event.c:395
+	#9  event_base_loop (base=0x63c870, flags=&lt;value optimized out&gt;) at event.c:547
 	#10 0x00000000004175bf in worker_libevent (arg=0x62fa60) at thread.c:378
 	#11 0x0000003bce0079d1 in start_thread () from /lib64/libpthread.so.0
 	#12 0x0000003bcdce89dd in clone () from /lib64/libc.so.6
@@ -404,7 +404,7 @@ stats
 	      tqe_next = 0x0, tqe_prev = 0x63d290}, ev_signal_next = {tqe_next = 0x0, tqe_prev = 0x0},
 	    min_heap_idx = 4294967295, ev_base = 0x63c870, ev_fd = 40, ev_events = 18, ev_ncalls = 0,
 	    ev_pncalls = 0x7ffff7d24e4e, ev_timeout = {tv_sec = 0, tv_usec = 0}, ev_pri = 0,
-	    ev_callback = 0x40e3a8 <event_handler>, ev_arg = 0x7fffe00261c0, ev_res = 2, ev_flags = 130}, ev_flags = 18,
+	    ev_callback = 0x40e3a8 &lt;event_handler&gt;, ev_arg = 0x7fffe00261c0, ev_res = 2, ev_flags = 130}, ev_flags = 18,
 	  which = 2, rbuf = 0x7fffe00263d0 "set company 0 0 11", rcurr = 0x7fffe00263d0 "set company 0 0 11", rsize = 2048,
 	  rbytes = 20, wbuf = 0x7fffe0026be0 "ERROR\r\n\r\nROR bad command line format\r\n",
 	  wcurr = 0x7fffe00296d0 "STAT pid 5794\r\nSTAT uptime 3112\r\nSTAT time 1423478618\r\nSTAT version 1.4.22\r\nSTAT libevent 1.4.14b-stable\r\nSTAT pointer_size 64\r\nSTAT rusage_user 0.017997\r\nSTAT rusage_system 3.215511\r\nSTAT curr_connec"..., wsize = 2048, wbytes = 1106, write_and_go = conn_new_cmd, write_and_free = 0x0, ritem = 0x7ffff4b20e3a "",
@@ -412,19 +412,19 @@ stats
 	  msgsize = 10, msgused = 1, msgcurr = 1, msgbytes = 37, ilist = 0x7fffe00273f0, isize = 200, icurr = 0x7fffe00273f0,
 	  ileft = 0, suffixlist = 0x7fffe0027a40, suffixsize = 20, suffixcurr = 0x7fffe0027a40, suffixleft = 0,
 	  protocol = ascii_prot, transport = tcp_transport, request_id = 0, request_addr = {sin6_family = 2, sin6_port = 49642,
-	    sin6_flowinfo = 86523914, sin6_addr = {__in6_u = {__u6_addr8 = '\000' <repeats 15 times>, __u6_addr16 = {0, 0, 0,
+	    sin6_flowinfo = 86523914, sin6_addr = {__in6_u = {__u6_addr8 = '\000' &lt;repeats 15 times&gt;, __u6_addr16 = {0, 0, 0,
 	          0, 0, 0, 0, 0}, __u6_addr32 = {0, 0, 0, 0}}}, sin6_scope_id = 0}, request_addr_size = 16, hdrbuf = 0x0,
 	  hdrsize = 0, noreply = false, stats = {buffer = 0x0, size = 2048, offset = 1106}, binary_header = {request = {
 	      magic = 0 '\000', opcode = 0 '\000', keylen = 0, extlen = 0 '\000', datatype = 0 '\000', reserved = 0,
-	      bodylen = 0, opaque = 0, cas = 0}, bytes = '\000' <repeats 23 times>}, cas = 7, cmd = -1, opaque = 0, keylen = 0,
+	      bodylen = 0, opaque = 0, cas = 0}, bytes = '\000' &lt;repeats 23 times&gt;}, cas = 7, cmd = -1, opaque = 0, keylen = 0,
 	  next = 0x0, thread = 0x62fa60}
 	(gdb) bt
 	#0  process_command (c=0x7fffe00261c0, command=0x7fffe00263d0 "set company 0 0 11") at memcached.c:3412
 	#1  0x000000000040cba6 in try_read_command (c=0x7fffe00261c0) at memcached.c:3768
 	#2  0x000000000040d8b9 in drive_machine (c=0x7fffe00261c0) at memcached.c:4113
 	#3  0x000000000040e427 in event_handler (fd=40, which=2, arg=0x7fffe00261c0) at memcached.c:4358
-	#4  0x00007ffff7de8c29 in event_process_active (base=0x63c870, flags=<value optimized out>) at event.c:395
-	#5  event_base_loop (base=0x63c870, flags=<value optimized out>) at event.c:547
+	#4  0x00007ffff7de8c29 in event_process_active (base=0x63c870, flags=&lt;value optimized out&gt;) at event.c:395
+	#5  event_base_loop (base=0x63c870, flags=&lt;value optimized out&gt;) at event.c:547
 	#6  0x00000000004175bf in worker_libevent (arg=0x62fa60) at thread.c:378
 	#7  0x0000003bce0079d1 in start_thread () from /lib64/libpthread.so.0
 	#8  0x0000003bcdce89dd in clone () from /lib64/libc.so.6
