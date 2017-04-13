@@ -8,7 +8,7 @@ description:
 
 ## 简介
 从JDK1.2开始，引入了强引用, 软引用, 弱引用和虚引用等概念，
-其引用级别StrongReference &gt; SoftReference &gt; WeakReference &gt; PhantomReference 
+其引用级别强引用 &gt; 软引用 &gt; 弱引用 &gt; 虚引用。
 
 ## 引用介绍
 
@@ -16,13 +16,13 @@ description:
 强引用为最普通的引用，如`StringBuilder builder = new StringBuilder()`。如果一个对象具有强引用，那么它不会被垃圾回收器回收，
 当内存空间不足时，JVM将抛出`OutOfMemoryError`。
 
-### SoftReference(软引用)
+### 软引用(SoftReference)
 软引用用来引用一些有用但并非必须的对象，如缓存。当内存不足时，GC会把这些对象在第二次GC时回收。
 
-### WeakReference(弱引用)
+### 弱引用(WeakReference)
 比SoftReference的引用级别更弱一些，当GC工作时，不管内存是否足够，它都将把对象回收。
 
-### PhantomReference(虚引用)
+### 虚引用(PhantomReference)
 也称幽灵引用，为最弱的一种引用关系，一个对象是否有虚引用的存在，完全不会对其生存时间构成影响，也无法通过虚引用来取得一个对象实例。
 调用`PhantomReference.get()`都会得到`null`。
 
