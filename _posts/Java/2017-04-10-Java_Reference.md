@@ -7,12 +7,12 @@ description:
 ---
 
 ## 简介
-从JDK1.2开始，引入了StrongReference, SoftReference, WeakReference和PhantomReference等概念，
-其引用级别StrongReference &gt SoftReference &gt WeakReference &gt PhantomReference 
+从JDK1.2开始，引入了强引用, 软引用, 弱引用和虚引用等概念，
+其引用级别StrongReference &gt; SoftReference &gt; WeakReference &gt; PhantomReference 
 
 ## 引用介绍
 
-### StrongReference(强引用)
+### 强引用
 强引用为最普通的引用，如`StringBuilder builder = new StringBuilder()`。如果一个对象具有强引用，那么它不会被垃圾回收器回收，
 当内存空间不足时，JVM将抛出`OutOfMemoryError`。
 
@@ -96,7 +96,7 @@ description:
 
 ### 运行结果
 
-设置JVM参数：`-XX:+PrintFlagsFinal -XX:+PrintGCDetails -XX:+PrintGCDateStamps -XX:+PrintGCTimeStamps  -Xloggc:reference_gc.log` 观察GC，结果如下：
+设置JVM参数：`-XX:+PrintGCDetails -XX:+PrintGCDateStamps -XX:+PrintGCTimeStamps  -Xloggc:reference_gc.log` 观察GC，结果如下：
 
     soft: james
     after gc soft: james
