@@ -1,6 +1,6 @@
 ## 我的技术博客
 
-地址：[http://www.cocloud.net](http://www.cocloud.net)
+地址：[http://www.iknowers.com](http://www.iknowers.com)
 
 ### 安装说明
 
