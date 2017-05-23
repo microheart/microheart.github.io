@@ -6,14 +6,14 @@ markdown: kramdown
 author: 
   name: 徐顺
   email: xushun007@gmail.com
-  link: http://www.cocoloud.net
+  link: http://www.iknowers.com
   weibo: http://weibo.com/mircoheart
   github: https://github.com/microheart
 
 # 站点信息
 title: 徐顺的博客 
 description: 徐顺的博客
-url: http://www.cocoloud.net
+url: http://www.iknowers.com
 rss_url: /pages/atom.xml
 
 # gavatar头像及Favicon
@@ -27,7 +27,7 @@ favicon: /public/upload/gavatar/favicon.ico
 
 # disqus 设置
 disqus:
-  shortname: xandy-zh
+  shortname: xandy-xu
 
 # 主题设置，自动激活某个标签
 active: 技术
