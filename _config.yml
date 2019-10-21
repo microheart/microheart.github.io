@@ -6,14 +6,14 @@ markdown: kramdown
 author: 
   name: 徐顺
   email: xushun007@gmail.com
-  link: http://www.iknowers.com
+  link: http://www.archzoo.com
   weibo: http://weibo.com/mircoheart
   github: https://github.com/microheart
 
 # 站点信息
 title: 徐顺的博客 
 description: 徐顺的博客
-url: http://www.iknowers.com
+url: http://www.archzoo.com
 rss_url: /pages/atom.xml
 
 # gavatar头像及Favicon
